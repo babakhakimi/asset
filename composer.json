@@ -14,8 +14,7 @@
         }
     },
     "require": {
-        "php": "^7.3 || ^8.0",
-        "laravie/html": "^7.1"
+        "php": "^7.3 || ^8.0"
     },
     "require-dev": {
         "illuminate/filesystem": "^8.0"
