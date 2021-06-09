@@ -5,7 +5,6 @@ namespace Lorito\Asset;
 use Illuminate\Contracts\Container\Container;
 use Illuminate\Contracts\Support\DeferrableProvider;
 use Illuminate\Support\ServiceProvider;
-use Laravel\Octane\Events\RequestReceived;
 
 class AssetServiceProvider extends ServiceProvider implements DeferrableProvider
 {
@@ -22,10 +21,6 @@ class AssetServiceProvider extends ServiceProvider implements DeferrableProvider
 
         $this->registerAsset();
 
-        $this->app['events']->listen(RequestReceived::class, function ($event) {
-            $event->sandbox->forgetInstance('lorito.asset.dispatcher');
-            $event->sandbox->forgetInstance('lorito.asset');
-        });
     }
 
     /**
@@ -33,7 +28,7 @@ class AssetServiceProvider extends ServiceProvider implements DeferrableProvider
      */
     protected function registerAsset(): void
     {
-        $this->app->singleton('lorito.asset', static function (Container $app) {
+        $this->app->singleton('lorito.asset', static function ($app) {
             return new Factory($app->make('lorito.asset.dispatcher'));
         });
     }
