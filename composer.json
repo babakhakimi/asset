@@ -1,0 +1,36 @@
+{
+    "name": "lorito/asset",
+    "description": "Asset for Lorito Platform",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "babakhakimimehr",
+            "email": "babakhakimimehr@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Lorito\\Asset\\" : "src/"
+        }
+    },
+    "require": {
+        "php": "^7.3 || ^8.0",
+        "laravie/html": "^7.1"
+    },
+    "require-dev": {
+        "illuminate/filesystem": "^8.0"
+    },
+    "suggest": {
+        "illuminate/filesystem": "Allow using lorito/asset component outside of Laravel app (^8.0).",
+        "lorito/html": "Allow using lorito/asset with HTML component (^6.0)."
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "6.0-dev"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev"
+}
