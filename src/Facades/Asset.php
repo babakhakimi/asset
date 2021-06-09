@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Lorito\Support\Facades;
+namespace Lorito\Asset\Facades;
 
 /**
  * @method static \Lorito\Asset\Asset container(string $container = 'default')
