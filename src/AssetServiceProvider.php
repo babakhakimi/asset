@@ -29,7 +29,8 @@ class AssetServiceProvider extends ServiceProvider implements DeferrableProvider
     protected function registerAsset(): void
     {
         $this->app->singleton('lorito.asset', static function ($app) {
-            return new Factory($app->make('lorito.asset.dispatcher'));
+            return new Asset('lorito.asset',$app->make('lorito.asset.dispatcher'));
+//            return new Factory($app->make('lorito.asset.dispatcher'));
         });
     }
 
