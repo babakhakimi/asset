@@ -21,12 +21,12 @@
         "illuminate/filesystem": "^8.0"
     },
     "suggest": {
-        "illuminate/filesystem": "Allow using lorito/asset component outside of Laravel app (^8.0).",
-        "lorito/html": "Allow using lorito/asset with HTML component (^6.0)."
+        "illuminate/filesystem": "Allow using lorito/asset component outside of Laravel app.",
+        "lorito/html": "Allow using lorito/asset with HTML component."
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "6.0-dev"
+            "dev-master": "1.1-dev"
         }
     },
     "config": {
